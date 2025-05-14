@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const navLinks = [
   { name: 'ABOUT', url: '#about' },
@@ -42,6 +43,17 @@ const styles = {
     position: 'relative',
     paddingLeft: '30px'
   },
+  glitchResumeLink: {
+    color: '#64ffda',
+    textDecoration: 'none',
+    fontSize: '14px',
+    fontFamily: 'monospace',
+    textTransform: 'uppercase',
+    letterSpacing: '2px',
+    padding: '10px',
+    marginTop: '25px',
+    marginLeft: '30px'
+  },
   navLine: {
     position: 'absolute',
     left: '0',
@@ -65,11 +77,35 @@ const Header = () => {
       {/* Navigation */}
       <nav style={styles.nav}>
         {navLinks.map((link, index) => (
-          <a key={index} href={link.url} style={styles.navItem} className="interactive-element">
+          <a 
+            key={index} 
+            href={link.url} 
+            style={styles.navItem} 
+            className="interactive-element"
+          >
             <span style={styles.navLine}></span>
             {link.name}
           </a>
         ))}
+        
+        {/* Glitch Effect Resume Link */}
+        <motion.a
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={styles.glitchResumeLink}
+          className="interactive-element"
+          whileHover={{
+            textShadow: [
+              '2px 0 #ff0000, -2px 0 #00ff00',
+              '-2px 0 #ff0000, 2px 0 #00ff00',
+              '2px 0 #ff0000, -2px 0 #00ff00'
+            ],
+            transition: { duration: 0.2, repeat: Infinity }
+          }}
+        >
+          &lt;Resume.tsx /&gt;
+        </motion.a>
       </nav>
     </header>
   )
