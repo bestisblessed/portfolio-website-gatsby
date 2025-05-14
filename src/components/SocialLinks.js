@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { FaGithub, FaLinkedin, FaInstagram, FaYoutube } from 'react-icons/fa'
 
 const styles = {
   socialLinks: {
@@ -9,9 +10,12 @@ const styles = {
   },
   socialIcon: {
     color: '#a8b2d1',
-    fontSize: '20px',
-    transition: 'color 0.2s ease',
-    cursor: 'pointer'
+    fontSize: '24px',
+    transition: 'color 0.3s ease-in-out',
+    cursor: 'pointer',
+  },
+  socialIconHover: {
+    color: '#64ffda'
   },
   socialLink: {
     textDecoration: 'none'
@@ -20,21 +24,30 @@ const styles = {
 
 // Social links
 const socialLinks = [
-  { name: 'GitHub', url: 'https://github.com', icon: 'github' },
-  { name: 'LinkedIn', url: 'https://linkedin.com', icon: 'linkedin' },
-  { name: 'CodePen', url: 'https://codepen.io', icon: 'codepen' },
-  { name: 'Instagram', url: 'https://instagram.com', icon: 'instagram' },
-  { name: 'Twitter', url: 'https://twitter.com', icon: 'twitter' }
+  { name: 'GitHub', url: 'https://github.com/bestisblessed', icon: 'github' },
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/tyler-durette-43b54317a/', icon: 'linkedin' },
+  { name: 'YouTube', url: 'https://www.youtube.com/@drty6818', icon: 'youtube' },
+  { name: 'Instagram', url: 'https://www.instagram.com/tylerdurette1/#', icon: 'instagram' }
 ]
 
 const SocialIcon = ({ name }) => {
+  const [isHovered, setIsHovered] = useState(false)
+  
+  const iconStyle = {
+    ...styles.socialIcon,
+    ...(isHovered ? styles.socialIconHover : {})
+  }
+
   return (
-    <span style={styles.socialIcon}>
-      {name === 'github' && '◻'}
-      {name === 'linkedin' && '◻'}
-      {name === 'codepen' && '◻'}
-      {name === 'instagram' && '◻'}
-      {name === 'twitter' && '◻'}
+    <span 
+      style={iconStyle}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
+      {name === 'github' && <FaGithub />}
+      {name === 'linkedin' && <FaLinkedin />}
+      {name === 'instagram' && <FaInstagram />}
+      {name === 'youtube' && <FaYoutube />}
     </span>
   )
 }

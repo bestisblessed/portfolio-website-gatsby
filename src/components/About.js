@@ -27,27 +27,26 @@ const About = () => {
     <section id="about" style={styles.section}>
       <h2 style={styles.sectionHeading}>ABOUT</h2>
       <p style={styles.paragraph}>
-        I'm a developer passionate about crafting accessible, pixel-perfect user interfaces
-        that blend thoughtful design with robust engineering. My favorite work lies at the
-        intersection of design and development, creating experiences that not only look great
-        but are meticulously built for performance and usability.
+        I'm a software engineer specializing in building AI-powered applications and data analysis tools.
+        My work focuses on creating sophisticated solutions that leverage machine learning and data science
+        to solve complex problems in various domains, particularly sports analytics, finance, and blockchain.
       </p>
       <p style={styles.paragraph}>
-        Currently, I'm a Senior Front-End Engineer at <span style={styles.highlight}>TechCorp</span>, specializing in
-        accessibility. I contribute to the creation and maintenance of UI components that power
-        TechCorp's frontend, ensuring our platform meets web accessibility standards and best
-        practices to deliver an inclusive user experience.
+        Currently, I'm developing <span style={styles.highlight}>AI tools for sports analysis</span> and
+        <span style={styles.highlight}> trading bots</span> for cryptocurrency markets. I've created 
+        multiple web applications that provide advanced data analysis for NFL and UFC/MMA sports,
+        helping users make more informed decisions.
       </p>
       <p style={styles.paragraph}>
-        In the past, I've had the opportunity to develop software across a variety of
-        settings — from <span style={styles.highlight}>design agencies</span> and <span style={styles.highlight}>large corporations</span> to <span style={styles.highlight}>start-ups</span> and
-        <span style={styles.highlight}> small digital product studios</span>. Additionally, I also released a <span style={styles.highlight}>comprehensive
-        video course</span> a few years ago, guiding learners through building a web app with
-        the Spotify API.
+        My expertise includes <span style={styles.highlight}>Python</span>, <span style={styles.highlight}>data science</span>,
+        <span style={styles.highlight}> machine learning</span>, <span style={styles.highlight}>web development</span>,
+        and <span style={styles.highlight}>blockchain technologies</span>. I'm passionate about creating tools that
+        transform complex data into actionable insights and automated systems.
       </p>
       <p style={styles.paragraph}>
-        In my spare time, I'm usually climbing, reading, hanging out with my partner and
-        two cats, or running around Hyrule searching for <span style={styles.highlight}>Korok seeds</span>.
+        Based in Boca Raton, FL, I'm always looking for new challenges and opportunities to apply
+        AI and data science to create innovative solutions. Feel free to check out my projects
+        on GitHub and connect with me on LinkedIn.
       </p>
     </section>
   )

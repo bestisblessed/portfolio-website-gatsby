@@ -56,10 +56,10 @@ const styles = {
 const Header = () => {
   return (
     <header style={styles.header}>
-      <h1 style={styles.name}>John Smith</h1>
-      <h2 style={styles.title}>Front End Engineer</h2>
+      <h1 style={styles.name}>Tyler Durette</h1>
+      <h2 style={styles.title}>Software Engineer</h2>
       <p style={styles.subtitle}>
-        I build accessible, pixel-perfect digital experiences for the web.
+        I build AI-powered applications and data analysis tools for sports, finance, and blockchain.
       </p>
 
       {/* Navigation */}

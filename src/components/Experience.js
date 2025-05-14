@@ -64,19 +64,27 @@ const styles = {
 const experienceData = [
   {
     date: '2023 — PRESENT',
-    title: 'Senior Frontend Engineer, Accessibility',
-    company: 'TechCorp',
-    companyUrl: 'https://example.com',
-    description: 'Build and maintain critical components used to construct TechCorp\'s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.',
-    skills: ['JavaScript', 'TypeScript', 'React', 'Storybook']
+    title: 'AI Applications Developer',
+    company: 'Self-Employed',
+    companyUrl: 'https://github.com/bestisblessed',
+    description: 'Develop AI-powered applications and data analysis tools for sports, finance, and blockchain. Create and maintain multiple web applications for NFL and UFC/MMA data analysis. Design and implement automated trading bots for cryptocurrency markets.',
+    skills: ['Python', 'AI', 'Machine Learning', 'Streamlit', 'Data Science']
   },
   {
-    date: '2019 — 2023',
-    title: 'Lead Engineer',
-    company: 'DesignStudio',
-    companyUrl: 'https://example.com',
-    description: 'Build, style, and ship high-quality websites, design systems, mobile apps, and digital experiences for a diverse array of projects for clients including startups, educational institutions, and non-profits. Provide leadership within engineering department through close collaboration, knowledge shares, and mentorship.',
-    skills: ['React', 'Next.js', 'CSS', 'Node.js']
+    date: '2022 — PRESENT',
+    title: 'Sports Analytics Developer',
+    company: 'The Fight Predictor',
+    companyUrl: 'https://github.com/bestisblessed/the-fight-predictor-agent',
+    description: 'Created an automated AI agent designed for professional fight analysis. Built and deployed data analysis tools for sports handicappers, focusing on UFC/MMA and NFL. Implemented machine learning models for predictive analytics in sports.',
+    skills: ['Python', 'AI', 'Data Analytics', 'Jupyter Notebook', 'Twitter API']
+  },
+  {
+    date: '2021 — PRESENT',
+    title: 'Blockchain Developer',
+    company: 'Trading Bots',
+    companyUrl: 'https://github.com/bestisblessed/trading-bots-public',
+    description: 'Developed various trading bots and blockchain scripts for Solana and Base chains. Created monitoring scripts for odds tracking across various sports books. Implemented automated trading strategies for cryptocurrency markets.',
+    skills: ['Shell', 'Blockchain', 'Solana', 'Base', 'Trading Algorithms']
   }
 ]
 

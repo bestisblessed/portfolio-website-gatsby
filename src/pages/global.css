@@ -43,7 +43,7 @@ a:hover {
 .left-column {
   display: flex;
   flex-direction: column;
-  padding-top: 100px;
+  padding-top: 150px;
   position: sticky;
   top: 0;
   height: 100vh;
@@ -52,7 +52,7 @@ a:hover {
 }
 
 .right-column {
-  padding-top: 100px;
+  padding-top: 150px;
   max-width: 700px;
   margin-left: 100px;
 }
@@ -98,3 +98,8 @@ a:hover {
     padding: 0 25px;
   }
 } 
+
+/*Add spacing for section headings
+h2 {
+  margin-top: 30px;
+} */

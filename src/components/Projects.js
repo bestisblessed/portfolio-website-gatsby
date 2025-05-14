@@ -56,22 +56,40 @@ const styles = {
 
 const projectsData = [
   {
-    title: 'Music Streaming App',
-    url: 'https://example.com',
-    description: 'A web application for visualizing personalized Spotify data. View your top artists, top tracks, recently played tracks, and detailed audio information about each track. Create and save new playlists of recommended songs based on your existing playlists.',
-    skills: ['React', 'Styled Components', 'Express', 'Spotify API']
+    title: 'NFL-AI',
+    url: 'https://nfl-ai.streamlit.app/',
+    description: 'NFL data analysis website designed for advanced sports handicappers. Features interactive visualization tools, AI-driven insights, and comprehensive statistical analysis to help users make more informed decisions.',
+    skills: ['Python', 'Streamlit', 'AI', 'Data Analysis', 'Jupyter Notebook']
   },
   {
-    title: 'Personal Blog',
-    url: 'https://example.com',
-    description: 'A minimal, dark theme for VS Code, Sublime Text, Atom, iTerm, and more. Available on Visual Studio Marketplace, Package Control, and npm.',
-    skills: ['Gatsby', 'MDX', 'GraphQL']
+    title: 'MMA-AI',
+    url: 'https://mma-ai.streamlit.app/',
+    description: 'UFC/MMA data analysis platform with AI report generation and fight prediction capabilities. Built for advanced sports handicappers to analyze fighter statistics, matchup histories, and generate predictive insights.',
+    skills: ['Python', 'Streamlit', 'AI', 'Data Analysis', 'Jupyter Notebook']
   },
   {
-    title: 'E-commerce Platform',
-    url: 'https://example.com',
-    description: 'A fully functional e-commerce platform built with modern web technologies. Features include product browsing, cart management, user authentication, and payment processing.',
-    skills: ['Next.js', 'Redux', 'Stripe', 'MongoDB']
+    title: 'The Fight Predictor Agent',
+    url: 'https://github.com/bestisblessed/the-fight-predictor-agent',
+    description: 'Automated AI agent designed for professional fight analysis. Currently deployed on Twitter, this bot analyzes upcoming fights, fighter statistics, and provides predictive insights for the fighting community.',
+    skills: ['Python', 'AI', 'Twitter API', 'Machine Learning']
+  },
+  {
+    title: 'Trading Bots',
+    url: 'https://github.com/bestisblessed/trading-bots-public',
+    description: 'Collection of Solana and Base chain scripts for building trading bots. These tools provide the building blocks for automated cryptocurrency trading systems with various strategies and risk management techniques.',
+    skills: ['Shell', 'Blockchain', 'Solana', 'Base', 'Trading']
+  },
+  {
+    title: 'Odds Monitoring',
+    url: 'https://github.com/bestisblessed/odds-monitoring',
+    description: 'Odds monitoring scripts for NFL, NCAAF, UFC, and more from various books designed to run in cron jobs throughout the day. These tools help track betting lines and identify value opportunities across different markets.',
+    skills: ['Python', 'Jupyter Notebook', 'Data Scraping', 'Cron Jobs']
+  },
+  {
+    title: 'AI Templates',
+    url: 'https://github.com/bestisblessed/ai-templates',
+    description: 'Various templates for different use cases of the OpenAI API (mostly assistants) designed to help beginners get started. A collection of boilerplate code and examples to accelerate AI application development.',
+    skills: ['OpenAI API', 'Python', 'AI', 'Templates']
   }
 ]
 
@@ -85,7 +103,7 @@ const Projects = () => {
           <div style={styles.projectContent}>
             <div style={styles.projectTitle}>
               {project.title}
-              <a href={project.url} style={styles.projectLink}>
+              <a href={project.url} target="_blank" rel="noopener noreferrer" style={styles.projectLink}>
                 <span style={styles.arrow}>↗</span>
               </a>
             </div>
