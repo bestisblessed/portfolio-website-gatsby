@@ -30,7 +30,8 @@ const IndexPage = () => {
         className="cursor-spotlight" 
         style={{
           left: `${mousePosition.x}px`,
-          top: `${mousePosition.y}px`
+          top: `${mousePosition.y}px`,
+          pointerEvents: 'none'
         }}
       ></div>
       <div className="left-column">

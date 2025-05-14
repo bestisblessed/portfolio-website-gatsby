@@ -13,13 +13,14 @@ const styles = {
     color: '#a8b2d1',
     fontSize: '24px',
     transition: 'color 0.3s ease-in-out',
-    cursor: 'pointer',
+    cursor: 'pointer'
   },
   socialIconHover: {
     color: '#64ffda'
   },
   socialLink: {
-    textDecoration: 'none'
+    textDecoration: 'none',
+    cursor: 'pointer'
   }
 }
 

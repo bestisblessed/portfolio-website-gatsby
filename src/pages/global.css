@@ -6,7 +6,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  cursor: default;
 }
 
 html {
@@ -20,13 +19,13 @@ body {
   line-height: 1.3;
   overflow-x: hidden;
   padding: 0;
-  cursor: none;
 }
 
 a {
   text-decoration: none;
   color: inherit;
   transition: color 0.2s ease;
+  cursor: pointer;
 }
 
 a:hover {
@@ -68,8 +67,8 @@ h2:hover {
 }
 
 /* Mouse cursor styling */
-a, button, [role="button"], .interactive-element {
-  cursor: none;
+button, [role="button"], .interactive-element {
+  cursor: pointer;
 }
 
 .container {
@@ -164,7 +163,6 @@ section[id] {
   mix-blend-mode: screen;
 }
 
-/* Custom cursor dot */
 .cursor-spotlight::after {
   display: none;
 }
