@@ -27,7 +27,13 @@ const styles = {
     color: '#64ffda',
     display: 'inline-flex',
     alignItems: 'center',
-    marginLeft: '7px'
+    justifyContent: 'center',
+    marginLeft: '10px',
+    width: '32px',
+    height: '32px',
+    borderRadius: '4px',
+    backgroundColor: 'rgba(100, 255, 218, 0.1)',
+    transition: 'all 0.2s ease'
   },
   paragraph: {
     color: '#8892b0',
@@ -49,8 +55,7 @@ const styles = {
     fontSize: '12px'
   },
   arrow: {
-    marginLeft: '5px',
-    fontSize: '18px'
+    fontSize: '16px'
   }
 }
 
@@ -103,7 +108,13 @@ const Projects = () => {
           <div style={styles.projectContent}>
             <div style={styles.projectTitle}>
               {project.title}
-              <a href={project.url} target="_blank" rel="noopener noreferrer" style={styles.projectLink}>
+              <a 
+                href={project.url} 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                style={styles.projectLink}
+                className="project-link"
+              >
                 <span style={styles.arrow}>↗</span>
               </a>
             </div>

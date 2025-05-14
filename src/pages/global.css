@@ -167,3 +167,10 @@ section[id] {
   display: none;
 }
 
+/* Project link hover effect */
+.project-link:hover {
+  background-color: rgba(100, 255, 218, 0.2) !important;
+  box-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
+  transform: translateY(-2px);
+}
+
