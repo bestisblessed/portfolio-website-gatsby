@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { motion } from 'framer-motion'
 
 const navLinks = [
@@ -28,7 +28,7 @@ const styles = {
     lineHeight: '1.5',
     maxWidth: '300px',
     color: '#8892b0',
-    marginBottom: '100px'
+    marginBottom: '75px'
   },
   nav: {
     display: 'flex',
@@ -38,15 +38,21 @@ const styles = {
   navItem: {
     color: '#a8b2d1',
     textDecoration: 'none',
-    fontSize: '14px',
+    fontSize: '16px',
     letterSpacing: '1px',
     position: 'relative',
-    paddingLeft: '30px'
+    display: 'flex',
+    alignItems: 'center',
+    transition: 'all 0.3s ease'
+  },
+  navText: {
+    transition: 'transform 0.3s ease',
+    display: 'inline-block'
   },
   glitchResumeLink: {
     color: '#64ffda',
     textDecoration: 'none',
-    fontSize: '14px',
+    fontSize: '18px',
     fontFamily: 'monospace',
     textTransform: 'uppercase',
     letterSpacing: '2px',
@@ -60,17 +66,21 @@ const styles = {
     transition: 'border 0.2s ease'
   },
   navLine: {
-    position: 'absolute',
-    left: '0',
-    top: '50%',
+    position: 'relative',
     width: '20px',
     height: '1px',
     backgroundColor: '#64ffda',
-    transform: 'translateY(-50%)'
+    marginRight: '10px',
+    transition: 'width 0.3s ease'
+  },
+  navLineHover: {
+    width: '60px' // Longer line on hover
   }
 }
 
 const Header = () => {
+  const [hoveredItem, setHoveredItem] = useState(null);
+  
   return (
     <header style={styles.header}>
       <h1 style={styles.name}>Tyler Durette</h1>
@@ -85,11 +95,21 @@ const Header = () => {
           <a 
             key={index} 
             href={link.url} 
-            style={styles.navItem} 
+            style={{
+              ...styles.navItem,
+              color: hoveredItem === index ? '#e6f1ff' : '#a8b2d1'
+            }}
             className="interactive-element"
+            onMouseEnter={() => setHoveredItem(index)}
+            onMouseLeave={() => setHoveredItem(null)}
           >
-            <span style={styles.navLine}></span>
-            {link.name}
+            <span style={{
+              ...styles.navLine,
+              width: hoveredItem === index ? '60px' : '20px'
+            }}></span>
+            <span style={styles.navText}>
+              {link.name}
+            </span>
           </a>
         ))}
         
