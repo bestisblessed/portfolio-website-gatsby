@@ -39,7 +39,7 @@ const styles = {
   navItem: {
     color: '#a8b2d1',
     textDecoration: 'none',
-    fontSize: '18px',
+    fontSize: '15px',
     letterSpacing: '1.2px',
     position: 'relative',
     display: 'flex',

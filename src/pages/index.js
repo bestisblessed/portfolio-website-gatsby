@@ -44,6 +44,24 @@ const IndexPage = () => {
         <Experience />
         <Projects />
         <Education />
+        <div
+          style={{
+            marginTop: 'auto',
+            paddingBottom: '50px',
+            paddingTop: '55px',
+            marginRight: '50px',
+            fontSize: '1rem',
+            color: '#8892b0',
+            letterSpacing: '0.02em',
+            fontWeight: 400,
+            lineHeight: 1.6,
+            textAlign: 'right',
+            fontStyle: 'italic',
+            fontFamily: 'Courier New, Courier, monospace',
+          }}
+        >
+          Shoutout <a href="https://github.com/bchiang7/v4" target="_blank" rel="noopener noreferrer" style={{textDecoration: 'underline' }}>github.com/bchiang7/v4</a> .. love the website design
+        </div>
       </div>
     </div>
   )
