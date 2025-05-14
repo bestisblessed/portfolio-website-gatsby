@@ -3,7 +3,8 @@ import React, { useState } from 'react'
 const navLinks = [
   { name: 'ABOUT', url: '#about' },
   { name: 'EXPERIENCE', url: '#experience' },
-  { name: 'PROJECTS', url: '#projects' }
+  { name: 'PROJECTS', url: '#projects' },
+  { name: 'EDUCATION', url: '#education' }
 ]
 
 const styles = {

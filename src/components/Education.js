@@ -1,4 +1,5 @@
 import React from 'react'
+import './Education.css'
 
 const styles = {
   section: {
@@ -58,16 +59,18 @@ const educationData = [
 
 const Education = () => {
   return (
-    <section id="education" style={styles.section}>
-      <h2 style={styles.sectionHeading}>EDUCATION</h2>
+    <section id="education" className="education-section">
+      <h2 className="education-heading">EDUCATION</h2>
       
       {educationData.map((edu, index) => (
-        <div key={index} style={styles.education}>
-          <div style={styles.educationDate}>{edu.date}</div>
-          <div style={styles.educationContent}>
-            <div style={styles.schoolName}>{edu.school}</div>
-            <div style={styles.degree}>{edu.degree}</div>
-            <div style={styles.activities}>{edu.activities}</div>
+        <div key={index} className="education-item">
+          <div className="education-wrapper">
+            <div className="education-date">{edu.date}</div>
+            <div className="education-content">
+              <div className="education-school">{edu.school}</div>
+              <div className="education-degree">{edu.degree}</div>
+              <div className="education-activities">{edu.activities}</div>
+            </div>
           </div>
         </div>
       ))}

@@ -1,6 +1,7 @@
 # Portfolio Website Structure
 
-This document explains the key files and directories in the website structure to help you make your own tweaks.
+***Loosely designed in Figma and coded in Visual Studio Code by yours truly. Built with Gatsby.js and Tailwind CSS, deployed with Vercel. All text is set in the Inter typeface.***
+
 
 ## Main Directories
 

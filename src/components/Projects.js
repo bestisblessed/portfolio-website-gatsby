@@ -1,4 +1,5 @@
 import React from 'react'
+import './Projects.css'
 
 const styles = {
   section: {
@@ -100,32 +101,33 @@ const projectsData = [
 
 const Projects = () => {
   return (
-    <section id="projects" style={styles.section}>
-      <h2 style={styles.sectionHeading}>PROJECTS</h2>
+    <section id="projects" className="projects-section">
+      <h2 className="projects-heading">PROJECTS</h2>
       
       {projectsData.map((project, index) => (
-        <div key={index} style={styles.project}>
-          <div style={styles.projectContent}>
-            <div style={styles.projectTitle}>
+        <a 
+          key={index} 
+          className="project-item"
+          href={project.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`${project.title} - ${project.description}`}
+        >
+          <div className="project-content">
+            <div className="project-title">
               {project.title}
-              <a 
-                href={project.url} 
-                target="_blank" 
-                rel="noopener noreferrer" 
-                style={styles.projectLink}
-                className="project-link"
-              >
-                <span style={styles.arrow}>↗</span>
-              </a>
+              <span className="project-link">
+                <span className="project-arrow">↗</span>
+              </span>
             </div>
-            <p style={styles.paragraph}>{project.description}</p>
-            <div style={styles.skillTags}>
+            <p className="project-description">{project.description}</p>
+            <div className="project-skills">
               {project.skills.map((skill, skillIndex) => (
-                <span key={skillIndex} style={styles.skillTag}>{skill}</span>
+                <span key={skillIndex} className="project-skill">{skill}</span>
               ))}
             </div>
           </div>
-        </div>
+        </a>
       ))}
     </section>
   )
