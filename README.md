@@ -1,49 +1,85 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
-<h1 align="center">
-  Gatsby Minimal Starter
-</h1>
+# Portfolio Website Structure
 
-## 🚀 Quick start
+This document explains the key files and directories in the website structure to help you make your own tweaks.
 
-1.  **Create a Gatsby site.**
+## Main Directories
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+- **src/**: Contains all the source code for the website
+  - **components/**: Reusable React components
+  - **pages/**: Page components that Gatsby turns into actual pages
+  - **images/**: Static images used in the website
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+## Key Files
 
-2.  **Start developing.**
+### Configuration Files
 
-    Navigate into your new site’s directory and start it up.
+- **gatsby-config.js**: Main configuration file for Gatsby
+- **package.json**: NPM dependencies and scripts
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+### Page Files
 
-3.  **Open the code and start customizing!**
+- **src/pages/index.js**: Main entry point for the website
+  - Sets up the two-column layout
+  - Imports and renders all components
+  - Change this file to modify the overall structure
 
-    Your site is now running at http://localhost:8000!
+- **src/pages/global.css**: Global CSS styles
+  - Contains layout settings (column sizes, spacing)
+  - Sets global typography, colors and responsive breakpoints
+  - Edit this file to change layout dimensions, colors, or spacing
 
-    Edit `src/pages/index.js` to see your site update in real-time!
+### Component Files
 
-4.  **Learn more**
+- **src/components/Header.js**: The left column header
+  - Your name, title, and introduction
+  - Navigation menu items
+  - Edit this to change your personal info and navigation
 
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Tutorials](https://www.gatsbyjs.com/docs/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Guides](https://www.gatsbyjs.com/docs/how-to/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+- **src/components/About.js**: About section content
+  - Personal bio and description
+  - Current role and background
+  - Edit to update your personal information
 
-## 🚀 Quick start (Netlify)
+- **src/components/Experience.js**: Work experience section
+  - Job history with dates, titles, and descriptions
+  - Contains the `experienceData` array to easily edit work history
+  - Modify this array to update your job experiences
 
-Deploy this starter with one click on [Netlify](https://app.netlify.com/signup):
+- **src/components/Projects.js**: Projects showcase
+  - Featured projects with descriptions
+  - Contains the `projectsData` array
+  - Edit this array to showcase different projects
 
-[<img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify" />](https://app.netlify.com/start/deploy?repository=https://github.com/gatsbyjs/gatsby-starter-minimal)
+- **src/components/SocialLinks.js**: Social media links
+  - Social platform links in the footer
+  - Contains the `socialLinks` array
+  - Update this array to change your social profiles
+
+## Common Tweaks
+
+### Layout Adjustments
+
+- To change column widths or spacing:
+  - Edit `src/pages/global.css`
+  - Look for `.container`, `.left-column`, and `.right-column`
+
+### Color Scheme
+
+- The main colors are defined in various CSS files:
+  - Background color: `#0a192f` (dark blue)
+  - Text color: `#e6f1ff` (light blue/white)
+  - Accent color: `#64ffda` (teal)
+  - Secondary text: `#8892b0` (light gray/blue)
+
+### Content
+
+- To update personal information:
+  - Header.js: Name, title, short intro
+  - About.js: Detailed bio and background
+  - Experience.js: Work history
+  - Projects.js: Portfolio projects
+
+### Responsive Behavior
+
+- Mobile breakpoints are at 1080px, 768px, and 480px
+- Modify the media queries in global.css to change responsive behavior 
