@@ -1,5 +1,6 @@
 // Step 1: Import React
 import * as React from 'react'
+import { useEffect, useState } from 'react'
 import './global.css'
 
 import Header from '../components/Header'
@@ -9,8 +10,29 @@ import Projects from '../components/Projects'
 import SocialLinks from '../components/SocialLinks'
 
 const IndexPage = () => {
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  
+  useEffect(() => {
+    const updateMousePosition = (e) => {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    };
+    
+    window.addEventListener('mousemove', updateMousePosition);
+    
+    return () => {
+      window.removeEventListener('mousemove', updateMousePosition);
+    };
+  }, []);
+
   return (
     <div className="container">
+      <div 
+        className="cursor-spotlight" 
+        style={{
+          left: `${mousePosition.x}px`,
+          top: `${mousePosition.y}px`
+        }}
+      ></div>
       <div className="left-column">
         <Header />
         <SocialLinks />

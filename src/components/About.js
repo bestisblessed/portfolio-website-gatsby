@@ -25,7 +25,7 @@ const styles = {
 const About = () => {
   return (
     <section id="about" style={styles.section}>
-      <h2 style={styles.sectionHeading}>ABOUT</h2>
+      {/*<h2 style={styles.sectionHeading}>ABOUT</h2>*/}
       <p style={styles.paragraph}>
         I'm a software engineer specializing in building AI-powered applications and data analysis tools.
         My work focuses on creating sophisticated solutions that leverage machine learning and data science
