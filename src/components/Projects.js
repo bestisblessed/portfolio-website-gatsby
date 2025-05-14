@@ -37,7 +37,7 @@ const styles = {
   },
   paragraph: {
     color: '#8892b0',
-    fontSize: '16px',
+    fontSize: '18px',
     lineHeight: '1.7',
     maxWidth: '700px'
   },

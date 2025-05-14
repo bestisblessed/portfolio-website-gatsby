@@ -1,4 +1,5 @@
 import React from 'react'
+import { motion } from 'framer-motion'
 
 const styles = {
   section: {
@@ -12,13 +13,28 @@ const styles = {
   },
   paragraph: {
     color: '#8892b0',
-    fontSize: '16px',
+    fontSize: '18px',
     lineHeight: '1.7',
     maxWidth: '700px',
     marginBottom: '20px'
   },
   highlight: {
     color: '#64ffda'
+  },
+  glitchResumeLink: {
+    color: '#64ffda',
+    textDecoration: 'none',
+    fontSize: '18px',
+    fontFamily: 'monospace',
+    textTransform: 'uppercase',
+    letterSpacing: '2px',
+    padding: '4px 16px',
+    marginTop: '30px',
+    display: 'inline-flex',
+    alignItems: 'center',
+    width: 'fit-content',
+    borderRadius: '4px',
+    transition: 'border 0.2s ease'
   }
 }
 
@@ -48,6 +64,28 @@ const About = () => {
         AI and data science to create innovative solutions. Feel free to check out my projects
         on GitHub and connect with me on LinkedIn.
       </p>
+      
+      {/* Glitch Effect Resume Link */}
+      <motion.a
+        href="/resume.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={styles.glitchResumeLink}
+        className="interactive-element"
+        animate={{
+          textShadow: [
+            '2px 0 #ff0000, -2px 0 #00ff00',
+            '-2px 0 #ff0000, 2px 0 #00ff00',
+            '2px 0 #ff0000, -2px 0 #00ff00'
+          ]
+        }}
+        whileHover={{
+          border: '1px solid #64ffda',
+        }}
+        transition={{ duration: 0.4, repeat: Infinity }}
+      >
+        &lt;RESUME.TSX /&gt;
+      </motion.a>
     </section>
   )
 }

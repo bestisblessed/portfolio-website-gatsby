@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { motion } from 'framer-motion'
 
 const navLinks = [
   { name: 'ABOUT', url: '#about' },
@@ -9,37 +8,38 @@ const navLinks = [
 
 const styles = {
   header: {
-    marginBottom: '40px'
+    marginBottom: '40px',
+    maxWidth: '90%'
   },
   name: {
-    fontSize: '48px',
+    fontSize: '56px',
     margin: '0 0 10px 0',
     color: '#e6f1ff',
     fontWeight: '600'
   },
   title: {
-    fontSize: '20px',
+    fontSize: '24px',
     fontWeight: 'normal',
     margin: '0 0 20px 0',
     color: '#e6f1ff'
   },
   subtitle: {
-    fontSize: '16px',
+    fontSize: '18px',
     lineHeight: '1.5',
     maxWidth: '300px',
     color: '#8892b0',
-    marginBottom: '75px'
+    marginBottom: '60px'
   },
   nav: {
     display: 'flex',
     flexDirection: 'column',
-    gap: '25px'
+    gap: '28px'
   },
   navItem: {
     color: '#a8b2d1',
     textDecoration: 'none',
-    fontSize: '16px',
-    letterSpacing: '1px',
+    fontSize: '18px',
+    letterSpacing: '1.2px',
     position: 'relative',
     display: 'flex',
     alignItems: 'center',
@@ -49,32 +49,16 @@ const styles = {
     transition: 'transform 0.3s ease',
     display: 'inline-block'
   },
-  glitchResumeLink: {
-    color: '#64ffda',
-    textDecoration: 'none',
-    fontSize: '18px',
-    fontFamily: 'monospace',
-    textTransform: 'uppercase',
-    letterSpacing: '2px',
-    padding: '4px 16px',
-    marginTop: '25px',
-    marginLeft: '30px',
-    borderRadius: '4px',
-    display: 'inline-flex',
-    alignItems: 'center',
-    width: 'fit-content',
-    transition: 'border 0.2s ease'
-  },
   navLine: {
     position: 'relative',
-    width: '20px',
-    height: '1px',
+    width: '24px',
+    height: '2px',
     backgroundColor: '#64ffda',
-    marginRight: '10px',
+    marginRight: '12px',
     transition: 'width 0.3s ease'
   },
   navLineHover: {
-    width: '60px' // Longer line on hover
+    width: '70px'
   }
 }
 
@@ -105,38 +89,16 @@ const Header = () => {
           >
             <span style={{
               ...styles.navLine,
-              width: hoveredItem === index ? '60px' : '20px'
+              width: hoveredItem === index ? '70px' : '24px'
             }}></span>
             <span style={styles.navText}>
               {link.name}
             </span>
           </a>
         ))}
-        
-        {/* Glitch Effect Resume Link - Box only on hover */}
-        <motion.a
-          href="/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={styles.glitchResumeLink}
-          className="interactive-element"
-          animate={{
-            textShadow: [
-              '2px 0 #ff0000, -2px 0 #00ff00',
-              '-2px 0 #ff0000, 2px 0 #00ff00',
-              '2px 0 #ff0000, -2px 0 #00ff00'
-            ]
-          }}
-          whileHover={{
-            border: '1px solid #64ffda',
-          }}
-          transition={{ duration: 0.4, repeat: Infinity }}
-        >
-          &lt;RESUME.TSX /&gt;
-        </motion.a>
       </nav>
     </header>
   )
 }
 
-export default Header 
+export default Header
