@@ -6,6 +6,7 @@ import './global.css'
 import Header from '../components/Header'
 import About from '../components/About'
 import Experience from '../components/Experience'
+import Education from '../components/Education'
 import Projects from '../components/Projects'
 import SocialLinks from '../components/SocialLinks'
 
@@ -42,6 +43,7 @@ const IndexPage = () => {
         <About />
         <Experience />
         <Projects />
+        <Education />
       </div>
     </div>
   )
