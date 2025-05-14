@@ -13,7 +13,7 @@ const experienceData = [
   {
     date: 'Aug 2021 — Mar 2023',
     title: 'DevOps Engineer',
-    company: 'RRAI',
+    company: 'Forterra (formerly RRAI)',
     companyUrl: 'https://www.forterra.com/',
     description: 'Architected and implemented cloud-based solutions using modern DevOps practices. Automated infrastructure deployment and application delivery pipelines, resulting in improved reliability and faster release cycles.',
     skills: ['Cloud Infrastructure', 'GitOps', 'Containerization', 'Automation', 'Monitoring']
@@ -32,6 +32,7 @@ const Experience = () => {
           href={job.companyUrl}
           target="_blank"
           rel="noopener noreferrer"
+          aria-label={`${job.title} at ${job.company} - ${job.date}`}
         >
           <div className="experience-wrapper">
             <div className="experience-date">{job.date}</div>
