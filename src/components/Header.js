@@ -50,9 +50,14 @@ const styles = {
     fontFamily: 'monospace',
     textTransform: 'uppercase',
     letterSpacing: '2px',
-    padding: '10px',
+    padding: '4px 16px',
     marginTop: '25px',
-    marginLeft: '30px'
+    marginLeft: '30px',
+    borderRadius: '4px',
+    display: 'inline-flex',
+    alignItems: 'center',
+    width: 'fit-content',
+    transition: 'border 0.2s ease'
   },
   navLine: {
     position: 'absolute',
@@ -88,23 +93,26 @@ const Header = () => {
           </a>
         ))}
         
-        {/* Glitch Effect Resume Link */}
+        {/* Glitch Effect Resume Link - Box only on hover */}
         <motion.a
           href="/resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           style={styles.glitchResumeLink}
           className="interactive-element"
-          whileHover={{
+          animate={{
             textShadow: [
               '2px 0 #ff0000, -2px 0 #00ff00',
               '-2px 0 #ff0000, 2px 0 #00ff00',
               '2px 0 #ff0000, -2px 0 #00ff00'
-            ],
-            transition: { duration: 0.2, repeat: Infinity }
+            ]
           }}
+          whileHover={{
+            border: '1px solid #64ffda',
+          }}
+          transition={{ duration: 0.4, repeat: Infinity }}
         >
-          &lt;Resume.tsx /&gt;
+          &lt;RESUME.TSX /&gt;
         </motion.a>
       </nav>
     </header>
