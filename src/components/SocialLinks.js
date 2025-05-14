@@ -6,7 +6,8 @@ const styles = {
     display: 'flex',
     gap: '20px',
     marginTop: 'auto',
-    paddingBottom: '40px'
+    paddingBottom: '40px',
+    marginLeft: '50px'
   },
   socialIcon: {
     color: '#a8b2d1',
@@ -43,6 +44,8 @@ const SocialIcon = ({ name }) => {
       style={iconStyle}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      role="img"
+      aria-hidden="true"
     >
       {name === 'github' && <FaGithub />}
       {name === 'linkedin' && <FaLinkedin />}
@@ -60,6 +63,7 @@ const SocialLinks = () => {
           key={index} 
           href={link.url} 
           style={styles.socialLink}
+          className="interactive-element"
           target="_blank"
           rel="noopener noreferrer"
           aria-label={link.name}

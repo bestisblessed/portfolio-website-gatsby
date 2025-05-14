@@ -65,7 +65,7 @@ const Header = () => {
       {/* Navigation */}
       <nav style={styles.nav}>
         {navLinks.map((link, index) => (
-          <a key={index} href={link.url} style={styles.navItem}>
+          <a key={index} href={link.url} style={styles.navItem} className="interactive-element">
             <span style={styles.navLine}></span>
             {link.name}
           </a>
