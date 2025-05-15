@@ -1,5 +1,4 @@
 import React from 'react'
-import { motion } from 'framer-motion'
 
 const styles = {
   section: {
@@ -64,30 +63,6 @@ const About = () => {
         AI and data science to create innovative solutions. Feel free to check out my projects
         on GitHub and connect with me on LinkedIn.
       </p>
-      
-      {/* Glitch Effect Resume Link */}
-      <div style={{ display: 'flex', justifyContent: 'center', width: '100%' }}>
-        <motion.a
-          href="/resume.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={styles.glitchResumeLink}
-          className="interactive-element"
-          animate={{
-            textShadow: [
-              '2px 0 #ff0000, -2px 0 #00ff00',
-              '-2px 0 #ff0000, 2px 0 #00ff00',
-              '2px 0 #ff0000, -2px 0 #00ff00'
-            ]
-          }}
-          whileHover={{
-            border: '1px solid #64ffda',
-          }}
-          transition={{ duration: 0.4, repeat: Infinity }}
-        >
-          &lt;RESUME.TSX /&gt;
-        </motion.a>
-      </div>
     </section>
   )
 }

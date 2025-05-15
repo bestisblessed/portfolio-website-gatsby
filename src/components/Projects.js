@@ -1,65 +1,6 @@
 import React from 'react'
 import './Projects.css'
 
-const styles = {
-  section: {
-    marginBottom: '100px'
-  },
-  sectionHeading: {
-    fontSize: '24px',
-    marginBottom: '40px',
-    color: '#ccd6f6',
-    fontWeight: '600'
-  },
-  project: {
-    marginBottom: '50px'
-  },
-  projectContent: {
-    flex: 1
-  },
-  projectTitle: {
-    fontSize: '18px',
-    marginBottom: '15px',
-    color: '#ccd6f6',
-    display: 'flex',
-    alignItems: 'center'
-  },
-  projectLink: {
-    color: '#64ffda',
-    display: 'inline-flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginLeft: '10px',
-    width: '32px',
-    height: '32px',
-    borderRadius: '4px',
-    backgroundColor: 'rgba(100, 255, 218, 0.1)',
-    transition: 'all 0.2s ease'
-  },
-  paragraph: {
-    color: '#8892b0',
-    fontSize: '18px',
-    lineHeight: '1.7',
-    maxWidth: '700px'
-  },
-  skillTags: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    marginTop: '20px',
-    gap: '10px'
-  },
-  skillTag: {
-    backgroundColor: 'rgba(100, 255, 218, 0.1)',
-    color: '#64ffda',
-    padding: '5px 10px',
-    borderRadius: '3px',
-    fontSize: '12px'
-  },
-  arrow: {
-    fontSize: '16px'
-  }
-}
-
 const projectsData = [
   {
     title: 'NFL-AI',

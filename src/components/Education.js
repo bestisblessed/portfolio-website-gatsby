@@ -1,47 +1,6 @@
 import React from 'react'
 import './Education.css'
 
-const styles = {
-  section: {
-    marginBottom: '100px'
-  },
-  sectionHeading: {
-    fontSize: '24px',
-    marginBottom: '40px',
-    color: '#ccd6f6',
-    fontWeight: '600'
-  },
-  education: {
-    display: 'flex',
-    marginBottom: '50px'
-  },
-  educationDate: {
-    width: '120px',
-    color: '#a8b2d1',
-    fontSize: '14px'
-  },
-  educationContent: {
-    flex: 1
-  },
-  schoolName: {
-    fontSize: '18px',
-    marginBottom: '5px',
-    color: '#ccd6f6',
-    fontWeight: '500'
-  },
-  degree: {
-    color: '#8892b0',
-    fontSize: '18px',
-    marginBottom: '5px'
-  },
-  activities: {
-    color: '#8892b0',
-    fontSize: '16px',
-    lineHeight: '1.6',
-    fontStyle: 'italic'
-  }
-}
-
 const educationData = [
   {
     school: 'James Madison University',
